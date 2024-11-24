@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- Query selector u can target element it can work by id, tag or class -->
+    Num1 <input type="text" class="input" placeholder="Enter the value 1" /> <br/>
+    Num2 <input type="text" class="input" placeholder="Enter the value 2" /> <br/>
+    Output <input type="text" class="input" placeholder="Enter the value 2" /> <br/>
+    <button>Save</button>    
+</body>
+<script>
+    let button=document.querySelector("button")
+    let allInput=document.querySelectorAll(".input")
+    button.addEventListener("click",()=>{
+           let input1Value=Number(allInput[0].value);
+           let input2Value=Number(allInput[1].value);
+           let output=input1Value+input2Value;
+           allInput[2].value=output;
+           allInput[0].value='';
+           allInput[1].value='';
+    })
+    
+</script>
+</html>

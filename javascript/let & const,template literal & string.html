@@ -1,0 +1,97 @@
+//let can be updated but can not be redecalared in one scope but can be declarein other scope..
+//block scope...{}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+   // {
+   // let a=10;
+   // console.log(a)
+//}
+//{
+ //   let a=20;
+ //   console.log(a)
+//}
+//let x;  console.log(x)if no use any value then it will be undefined by deafult..undefined
+let x=null; 
+console.log(typeof x);//object 
+let name=prompt("salam");//prompt is used for taken input from user
+console.log(name);
+//alert("nasir")
+let num=prompt("enter a number");
+if(num %5===0){
+    console.log("number,is multiple of 5");
+} else{
+    console.log("number,is not a multiple of 5");   
+}
+let fullName=prompt("Enter your full name without spaces");
+let username="@" +fullName+fullName.length;
+console.log(username);
+
+let obj={
+    item:"pencil",
+    price:"10",
+}
+console.log(`the cost of ${obj.item} is ${obj.price} rupees`);
+console.log("the cost of", obj.item, "is", obj.price,"rupees"); //highlight number value
+
+let specialString = `This is a template literal`;
+console.log(typeof specialString);
+console.log("nasir\tkhan"); //tab
+console.log("nasir\nkhan");
+//string method
+let str="  Nasir  khan";
+console.log(str.toUpperCase());
+console.log(str.toLowerCase());
+console.log(str.trim()); //trim white spaces from start to end not from mid
+let str1="12345666"
+console.log(str1.slice(1,3));
+console.log(str1.charAt(1));
+console.log(str1.replaceAll("1","9"));
+let names=["nasir","ayman","dua","fiza","junaid"]
+for (let i=0;i<names.length;i++){
+    console.log(names[i]);
+   // console.log(names.toUpperCase());  
+}
+let stds=["nasir","ayman","dua","fiza","junaid"]
+for (let std of stds){
+    console.log(std.toUpperCase());
+}
+let marks=[12,34,56,78,90,76]
+let sum=0;
+for(let val of marks){
+    sum+=val;
+}
+console.log(sum);
+let items=[12,34,56,78,90,76]
+let i=0;
+for(let val of items){
+    let offer=val/10;
+    items[i]=items[i]-offer;
+    console.log(`val after offer=${items[i]}`);
+    i++;
+}
+for (let i=0;i<items.length;i++){
+    let offer=items[i]/10;
+    items[i]-= offer;
+}
+console.log(items);
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

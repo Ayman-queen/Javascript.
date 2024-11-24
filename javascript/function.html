@@ -1,0 +1,167 @@
+//it make particular task easy ..userdefined function
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //normal function
+    function displayname(){  // i make task one time and how many time i call it will print
+        console.log("Welcom to home nasir")
+    }
+    displayname() // it call function  
+    displayname()
+    //function with parameter
+    function add(a,b) {
+        //parameter ;when defining function use values in paraenthesis
+        console.log(a+b);   
+    }
+    add(25.30)//argument when calling  function write in parenthesis -->input
+    add(10,30) //print 40 
+    //Return type function
+    function addData(num1,num2) {
+        return num1+num2;       //it will not print (after return never write anyrhing in your function)
+    }
+    let n=addData(10,20) //30 
+    console.log(n);
+    //function params -->like local var -->block scope till function block
+    function sum2(x,y){
+        //local variables-->scope
+        s=x+y;
+        //console.log(x);
+        return s;  
+    }
+//outside block if call then it never return --undefined
+//console.log(x)
+   let val=sum2(3,5);
+   console.log(val);
+function countVowels(string) {
+    let count=0;
+    for (const char of str){
+      if( 
+        char === "a"||
+        char === "e"||
+        char === "i"||
+        char === "o"||
+        char === "u"
+     ){ 
+        count++
+    }
+  }
+   return count++;
+    
+}
+//using arrow function
+const countVow=(str)=>{
+    let count=0;
+    for (const char of str){
+      if( 
+        char === "a"||
+        char === "e"||
+        char === "i"||
+        char === "o"||
+        char === "u"
+     )
+    { 
+        count++
+    }
+  }
+   return count++;
+
+}
+   
+    //Arrow function : smart way of written function
+    let Data=()=> console.log("Nasir");
+    Data()
+    const arrowSum=(a,b)=>{
+        console.log(a+b);   
+    }
+    arrowSum(2,3)
+    //Arrow function always written when u not use curly bracket 
+    //Arrow function with parameter
+    let ADD=(num1,num2) => num1*num2;
+    let o=ADD(25,98)
+    console.log(o);
+    let arrowMul=(x,y)=>{
+        console.log(x*y);  
+    }
+    arrowMul(6,7)
+    const print=()=>{
+        console.log("salam");   
+    };
+    print()
+    //one parameter round bracket in arrow function not mandatory
+    let func=num1=>num1;
+    let i=func("nasir") // let i=func(1)
+    console.log(i);
+    //if use curly bracket in arrow function then ,must also return
+    let defined=(n,m)=>{
+        return n+m;
+    }
+    let y=defined(-78,9)
+    console.log(y);
+    //default parameter
+    let define=(n,m=5)=>{
+        return n+m;
+    }
+    let z=define(9)
+    console.log(z);
+    //traditional function with this keyword
+    let obj={
+        "name":"nasir",
+        "age" : "25",
+        cinfo:function(){
+    //if in traditional function use this keyword then it return same object and in arrow function it changes their 
+    //behavior written window object
+            console.log(this.name);     
+        }
+    }
+    obj.cinfo() //call
+    //arrow function with this keyword(written window object)
+    let obj1={
+        "name":"nasir",
+        "age" : "25",
+        cinfo:()=>{
+            console.log(this);
+        }
+    }
+    obj1.cinfo()
+    //callback function
+    //call back function use in map,foreach,reduce,filter..koi function kisi or function k parameter ma
+   // ja kr use hota h
+   let DisplayData=(res)=>{
+       return res;
+   }
+   let sumData=(num1,num2,result)=>{  //here result is function which call in parameter
+        return result(num1+num2);
+ 
+   }
+   let A=sumData(20,30,DisplayData)  //num1=20,num2=30,displaydata=result..jb callback funct call hoga to round bracket ni use krna..
+   console.log(A);
+   
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    
+</script>
+</body>
+</html>

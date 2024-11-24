@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let L=[10,20,30,40,50]
+    L.push(99)//add element in end 
+    console.log(L);
+    L.unshift(46)//add element in start
+    console.log(L);
+    L.shift()//remove start element
+    L.shift()
+    console.log(L);
+    L.pop()//remove last element
+    console.log(L);
+    let n=["nasir","nasir"]
+    let data=n.toString() //.tostring : convert array to string and return comma separate
+    console.log(data);
+    let joinData=n.join('+')
+    console.log(joinData); //.join 
+    console.log(L.includes(20)); //.includes :it find value
+    let newArray=n.concat(L)// .concat
+    console.log(newArray);
+    let w=[90,10,46,87,[9,2],91]
+    //let newArray1=w.slice(0,2) // slice:before 2 index value will be written always a<b not equal or greater
+    let newArray1=w.flat()// flat :array written in correct way
+    console.log(newArray1);
+    //u can update array using index number and it value which u want to update like L[2]=44;
+    //map,filter reduce and for each method are special
+    //for Each :works on array it iterate array..
+    let l=[10,20,30,40,50]
+    //for each access all elemnts of array it cant be done directly so use call back function
+    //use 2 parameter one is take parameter value,and second take array index
+    l.forEach((x,y)=>{  //callback function anonymous function..iterate each element of array by for each
+        console.log(x,y);
+    })
+    //map:no change in existing array..make in result new array similar num of array in existing arrray
+    let finalAns=l.map((x,y)=>x+5)
+    console.log(finalAns);
+    let finalAns1=l.map((x,y)=>{
+        return x+5
+    })
+    console.log(finalAns1);
+    //separtely function make and then attach 
+    let setresult=(x,y)=>{
+        return x+5
+    }
+    let finalAns2=l.map(setresult)
+    console.log(finalAns2);
+    //filter:it can also give u less element than existing array..value cant be change
+    let N=[99,55,88,77,55,66,22,22]
+    let filterdata=N.filter((x,y)=>x%3==0)
+    console.log(filterdata);
+    //other method
+    let filterdata1=N.filter((x,y)=>{
+        if(x%2==0){
+            return x;
+        }
+    })
+    console.log(filterdata1);
+    let filterdata2=N.filter((x,y)=>{
+        if(x%2==0){
+            return true;
+        }
+    })
+    console.log(filterdata2);
+    //reduce function: reduce any array and give final answer always give single value there were three parameter
+    //1st param accumulator (total),2nd params array value..3rd parms array index 
+    let E=[1,2,3,4,5,6]
+    let finalAnswer=E.reduce((total,x,y)=>total+x)
+    console.log(finalAnswer);
+    //other method
+    let finalAnswer1=E.reduce((total,x,y)=>{
+        return total+x;
+    },5) //5 is initial value
+    console.log(finalAnswer1);
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+</script> 
+</body>
+</html>

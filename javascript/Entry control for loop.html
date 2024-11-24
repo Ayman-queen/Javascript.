@@ -1,0 +1,137 @@
+//if u want to repeat task many times then u can use loop 
+//for loop & while loop:it depends on three things....1.start:2.condition(stop where to end)3.step(increement/decreement)
+//Entry control loop (first of all check it can be go inside or not;for while...e.g;jb zoo animal ja rahy ho tb
+direct animals k pas ni reach kro gy phely apka ticket check hpga then apki entry hogi...)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+   // for (let start =1; start <=10 ; start++) {
+           //  console.log(start,"Welcome nasir");     
+   // }
+   //table of 100
+   for(let i=1;i<=20;i++){
+       console.log("100*",i,"=",i*100);     
+   }
+  // for(let n=10;n>=1;n--){
+       // console.log(n);    
+   //}
+   //for(let n=10;n>=1;n=n-2){
+        //console.log(n);    
+  // }
+    //break (it will save your time 6 will not print because u exit the loop)
+    for(let n=10;n>=1;n--){
+        if(n==6){
+            break;
+        }
+        console.log(n);  //10,9,8,7 
+    }
+    //6 will print because u use log before break condition
+    for(let n=10;n>=1;n--){
+        console.log(n); 
+        if(n==6){
+            break;
+        }//10,9,8,7,6
+    }
+    //continue;skip numbers divisble number 5 no print skip it.
+    for(let n=1;n<=50;n++){
+        if(n%5==0){
+            continue;  //(means skip this iteration and continue next iteratiit skips those number divisble by 5 & print all other numbers 
+        }
+        console.log(n);  
+    }
+    for(let n=1;n<=50;n++){
+        console.log(n);
+        if(n%5==0){
+            continue //it skips those number divisble by 5 but prnit 50 because i used log before continue condition. 
+        }  
+    }
+    //Nested for loop;loop inside loop
+    for(let row=1;row<=5;row++){ //inside loop depend on outside loop row=1 it give inside r<=5 then it works
+        for(let r=1;r<=5;r++)
+        console.log("*");//*****
+        }  
+//***** <br/> //***** <br/> //***** <br/> //***** <br/> //*****
+    for(let ro=1;ro<=5;ro++){ //pattern
+        for(let r=1;r<=ro;r++)
+        console.log("*");//*  //**  //***   //****  //*****
+        }
+    for(let rr=5;rr>=1;rr--){ //reverse pattern
+        for(let r=1;r<=rr;r++)
+        console.log("*");//*****  //****  //***  //**  //*
+        } 
+    for(let i=1;i<=5;i++){
+        for(let n=1;n<=i;n++){ //1 //12 //123 //1234 //12345
+        console.log(n);
+        }
+    }
+    for(let m=1;m<=5;m++){
+        for(let n=1;n<=m;n++){ //1
+        console.log(n);
+        }
+    }
+    //
+    let p=[10,20,30,40,50,88]
+    let t=p.length; //6
+
+    for(let n=0;n<t;n++){
+        console.log(n,p[n]);  
+    }
+    //reverse array 
+    for(let n=t-1;n>=0;n--){
+        console.log(n,p[n]);  
+    }
+    //easy method
+    for (let v of p){  //(it works only in string and array(not in obj)) 
+         console.log(v);    
+    }
+    //for of loop syntax for (let var of strVar)
+    let str="nasir";
+    for (let i of str){
+       console.log("i=",i);//i is iterator 
+    }
+    let size=0;
+    for (let i of str){
+        console.log("i=",i);//i is iterator 
+        size++;
+    }
+    console.log("string size=",size);
+    //for in loop always work for object and arrays
+    let student={
+        name:"Nasir",
+        age:25,
+        cgpa:3.8,
+        isPass:true
+    }
+    for(let key in student)
+       // console.log("key=",key, "value=",student[key]);
+        console.log(key,student[key]);
+    //practice q
+    let gameNum=25
+    let userNum=prompt("Guess the game number:")
+    console.log(userNum);
+    while(userNum!=gameNum){
+     prompt("You enterd the wrong number,Guess again")
+    }
+    console.log("congrats, you entered the right number");
+    for (let k in p){  //in give member index number
+         console.log(k,p[k]);    
+    }
+    //calculate sum of 1 to 5
+    let sum=0;
+    for (let i = 1; i <=5; i++) {
+        sum=sum+i;    //0+1=1,1+2=3,3+3=6,6+4=10,10+5=15
+    }
+    console.log("sum=",sum);
+    
+    console.log("loop has ended");
+    
+
+</script>  
+</body>
+</html>
